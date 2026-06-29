@@ -51,14 +51,14 @@ const Reviews = () => {
           </div>
         </div>
 
-        {/* Reviews */}
+        {/* Reviews Section */}
         <div className="grid md:grid-cols-3 gap-8">
           {reviews.map((item, index) => (
             <article
               key={index}
               className={` bg-white rounded-4xl p-8 shadow-[0_20px_50px_rgba(0,0,0,0.06)] relative ${index === 1 ? "md:-translate-y-8" : ""}   `}
             >
-              {/* quote */}
+              {/* Quote Section*/}
               <div className=" absolute top-5 right-7 text-7xl text-orange-100 font-serif">
                 ”
               </div>
@@ -88,7 +88,7 @@ const Reviews = () => {
           ))}
         </div>
 
-        {/* Bottom message */}
+        {/* Bottom message when required */}
         <div className="  mt-20  flex  justify-center">
           <div className="  bg-orange-600  text-white  rounded-full  px-8  py-4  shadow-lg  text-center"></div>
         </div>

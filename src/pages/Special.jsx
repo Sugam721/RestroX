@@ -3,7 +3,7 @@ import React from "react";
 const dishes = [
   {
     name: "RestroX Special Momo",
-    price: "Rs.750",
+    price: "Rs.650",
     image:
       "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782723335/momo_grizlf.jpg",
     description:
@@ -78,7 +78,8 @@ const Special = () => {
           {dishes.map((dish, index) => (
             <div
               key={index}
-              className="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-orange-500 transition-all duration-500"
+              className="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden
+               hover:border-orange-500 transition-all duration-500"
             >
               <div className="overflow-hidden">
                 <img
@@ -116,7 +117,10 @@ const Special = () => {
         {/* Button */}
 
         <div className="text-center mt-16">
-          <button className="px-10 py-4 bg-orange-500 hover:bg-orange-600 rounded-full text-white text-lg font-semibold transition hover:scale-105">
+          <button
+            className="px-10 py-4 bg-orange-500 hover:bg-orange-600 rounded-full 
+          text-white text-lg font-semibold transition hover:scale-105"
+          >
             Explore Our Full Menu
           </button>
         </div>
