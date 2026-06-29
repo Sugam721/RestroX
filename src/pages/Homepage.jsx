@@ -17,7 +17,7 @@ const Homepage = () => {
   const specialRef = useRef(null);
 
   useEffect(() => {
-    // Hero entrance
+    // Hero entrance Animation
     gsap.fromTo(
       heroRef.current,
       {
@@ -65,7 +65,7 @@ const Homepage = () => {
 
   return (
     <main>
-      {/* Hero */}
+      {/* Hero background Image  */}
       <section
         className=" min-h-screen bg-cover bg-center flex items-center justify-center relative overflow-hidden "
         style={{
@@ -118,14 +118,16 @@ const Homepage = () => {
         <OurStories />
       </div>
 
-      <div ref={specialRef}>
+      <div
+      // ref={specialRef}
+      >
         <Special />
       </div>
       <div>
         <Reserve />
         <Glimpse />
-        {/* <Stories />
-        <Reviews /> */}
+        <Stories />
+        <Reviews />
       </div>
     </main>
   );

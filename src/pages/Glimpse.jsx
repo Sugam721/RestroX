@@ -27,7 +27,7 @@ const Glimpse = () => {
       size: "normal",
     },
     {
-      title: "Signature Momos",
+      title: "Signature Momo",
       image:
         "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782723335/momo_grizlf.jpg",
       size: "large",
@@ -69,24 +69,11 @@ const Glimpse = () => {
             <img
               src={item.image}
               alt={item.title}
-              className="
-              w-full h-full object-cover
-              transition duration-700
-              group-hover:scale-110
-              "
+              className="w-full h-full object-covertransition duration-700 group-hover:scale-110"
             />
 
             {/* Overlay */}
-            <div
-              className="
-              absolute inset-0 
-              bg-linear-to-t from-black/70 via-black/20 to-transparent
-              opacity-0 group-hover:opacity-100
-              transition duration-500
-              flex items-end
-              p-6
-              "
-            >
+            <div className="  absolute inset-0   bg-linear-to-t from-black/70 via-black/20 to-transparent  opacity-0 group-hover:opacity-100  transition duration-500  flex items-end  p-6  ">
               <h3 className="text-white text-xl font-semibold">{item.title}</h3>
             </div>
           </div>

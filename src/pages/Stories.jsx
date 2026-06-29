@@ -15,12 +15,15 @@ const Stories = () => {
             <img
               src="https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782721739/Dish2_wbwxc0.webp"
               alt="RestroX Story"
-              className="w-full h-137.5 object-cover transition duration-700 group-hover:scale-110  "
+              className="w-full h-137.5 object-cover transition duration-700 group-hover:scale-110"
             />
           </div>
 
           {/* Floating Card */}
-          <div className="  absolute   -bottom-8   -right-5  md:right-10  bg-white  rounded-3xl  shadow-xl  p-6  max-w-xs">
+          <div
+            className="  absolute   -bottom-8   -right-5  md:right-10  bg-white  
+          rounded-3xl  shadow-xl  p-6  max-w-xs"
+          >
             {" "}
             <h3 className="text-xl font-bold text-gray-900">More Than Food</h3>
             <p className="text-gray-600 mt-2 text-sm">
@@ -55,7 +58,10 @@ const Stories = () => {
             </p>
           </div>
 
-          <button className="mt-10bg-orange-600hover:bg-orange-700text-white  px-8  py-4 rounded-full font-semibold shadow-lg transition">
+          <button
+            className="mt-10bg-orange-600hover:bg-orange-700text-white  
+          px-8  py-4 rounded-full font-semibold shadow-lg transition"
+          >
             Explore All Chronicles →
           </button>
         </div>

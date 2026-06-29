@@ -6,7 +6,7 @@ const Reviews = () => {
       name: "Happy Guest",
       role: "First Visit",
       review:
-        "The momos are incredible! Fresh, flavorful, and easily the best part of my visit.",
+        "The momo are incredible! Fresh, flavorful, and easily the best part of my visit.",
       image:
         "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782634883/69d2e0dd1ef87a76018e6c8c_72874c8877deb022dd35906d595c09ff_karv_h3bgey.jpg",
     },

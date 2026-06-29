@@ -118,8 +118,8 @@ const OurStories = () => {
           </p>
 
           <p>
-            Our famous momos became a customer favorite, but our journey is
-            about much more — bringing people together through great food.
+            Our famous momo became a customer favorite, but our journey is about
+            much more — bringing people together through great food.
           </p>
         </div>
 

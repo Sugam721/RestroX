@@ -43,7 +43,7 @@ export default function Menu() {
             Menu Categories
           </h2>
           <p className="mt-4 text-gray-600">
-            Discover our delicious selection of momos, meals, snacks, and
+            Discover our delicious selection of momo, meals, snacks, and
             refreshing beverages.
           </p>
         </div>
