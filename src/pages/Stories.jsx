@@ -59,7 +59,7 @@ const Stories = () => {
           </div>
 
           <button
-            className="mt-10bg-orange-600hover:bg-orange-700text-white  
+            className="mt-10 bg-orange-600 hover:bg-orange-700 text-white  
           px-8  py-4 rounded-full font-semibold shadow-lg transition"
           >
             Explore All Chronicles →

@@ -12,37 +12,32 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8 text-white font-medium">
-            <a href="#home" className="hover:text-red-400 transition">
+            <a href="/" className="hover:text-red-400 transition">
               Home
             </a>
 
-            <a href="#menu" className="hover:text-red-400 transition">
+            <a href="/menu" className="hover:text-red-400 transition">
               Menu
             </a>
 
-            <a href="#about" className="hover:text-red-400 transition">
+            <a href="/about" className="hover:text-red-400 transition">
               About
             </a>
 
-            <a href="#contact" className="hover:text-red-400 transition">
+            <a href="/contact" className="hover:text-red-400 transition">
               Contact
             </a>
           </div>
 
           {/* Book Button */}
           <button
-            className="
-              bg-red-600
-              text-white
-              px-7
-              py-3
-              rounded-full
-              font-semibold
-              transition-all
-              duration-300
-              hover:bg-white
-              hover:text-black
-            "
+            onClick={() => {
+              document.getElementById("booking").scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+            }}
+            className=" bg-red-600 text-white px-7 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-white hover:text-black "
           >
             Book a Table
           </button>

@@ -8,127 +8,165 @@ import Reserve from "./Reserve";
 import Glimpse from "./Glimpse";
 import Stories from "./Stories";
 import Reviews from "./Reviews";
+import Signature from "./Signature";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Homepage = () => {
-  const heroRef = useRef(null);
-  const storyRef = useRef(null);
-  const specialRef = useRef(null);
+  const heroSectionRef = useRef(null);
+  const heroContentRef = useRef(null);
+  const heroImageRef = useRef(null);
 
   useEffect(() => {
-    // Hero entrance Animation
-    gsap.fromTo(
-      heroRef.current,
-      {
+    const ctx = gsap.context(() => {
+      // Hero text animation
+      gsap.from(heroContentRef.current.children, {
         opacity: 0,
-        y: 120,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: "power4.out",
-      },
-    );
+        y: 50,
+        duration: 1,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: heroSectionRef.current,
+          start: "top 70%",
+          end: "bottom top",
+          toggleActions: "restart reverse restart reverse",
+        },
+      });
 
-    // Swipe up reveal sections
-    const sections = [storyRef.current, specialRef.current];
-
-    sections.forEach((section) => {
+      // Hero image zoom animation
       gsap.fromTo(
-        section,
+        heroImageRef.current,
         {
-          y: 120,
-          opacity: 0,
-          scale: 0.96,
+          scale: 1.12,
         },
         {
-          y: 0,
-          opacity: 1,
           scale: 1,
-          duration: 1,
-          ease: "power3.out",
+          duration: 2,
+          ease: "power2.out",
           scrollTrigger: {
-            trigger: section,
-            start: "top 80%",
-            toggleActions: "play none none reverse",
+            trigger: heroSectionRef.current,
+            start: "top 70%",
+            end: "bottom top",
+            toggleActions: "restart reverse restart reverse",
           },
         },
       );
-    });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
+      // Hero image parallax
+      gsap.to(heroImageRef.current, {
+        yPercent: 15,
+        ease: "none",
+        scrollTrigger: {
+          trigger: heroSectionRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      ScrollTrigger.refresh();
+    }, heroSectionRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
     <main>
-      {/* Hero background Image  */}
+      {/* HERO SECTION */}
       <section
-        className=" min-h-screen bg-cover bg-center flex items-center justify-center relative overflow-hidden "
-        style={{
-          backgroundImage:
-            "url('https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782718620/Homepage_adsqaj.jpg')",
-        }}
+        ref={heroSectionRef}
+        className="relative min-h-screen overflow-hidden flex items-center"
       >
-        <div className="absolute inset-0 bg-black/50" />
+        {/* Background Image */}
+        <img
+          ref={heroImageRef}
+          src="https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782749698/momo_bg_zze76d.jpg"
+          alt="RestroX Hero"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
 
-        <div
-          ref={heroRef}
-          className=" relative z-10 text-center text-white px-6 max-w-4xl "
-        >
-          {" "}
-          <h1 className=" text-5xl md:text-7xl font-serif font-bold mb-4 ">
-            {" "}
-            Welcome to RestroX
-          </h1>
-          <h2 className="  text-3xl md:text-5xl  font-light  mb-6  ">
-            Where Every Flavor Has a Story
-          </h2>
-          <p className="text-lg md:text-xltext-gray-200 leading-relaxed  mb-6">
-            Experience a perfect blend of taste, comfort, and creativity. From
-            our signature handmade momo to a variety of delicious dishes,
-            RestroX brings you food made with passion.
-          </p>
-          <p className="text-lg font-medium mb-8">
-            Fresh Ingredients • Great Taste • Memorable Moments
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              className="px-8 py-3 rounded-full bg-orange-500 hover:bg-orange-600  
-            transition  font-semibold  "
-            >
-              Explore Menu
-            </button>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-linear-to-r from-black/85 via-black/55 to-black/20" />
 
-            <button
-              className="  px-8 py-3  rounded-full  border  border-white  hover:bg-white 
-             hover:text-black  transition  font-semibold  "
-            >
-              Reserve a Table
-            </button>
+        {/* Content */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
+          <div ref={heroContentRef} className="max-w-2xl text-left text-white">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2">
+              <span>🥟</span>
+              <span className="uppercase tracking-[0.25em] text-xs md:text-sm">
+                Signature Handmade Momo
+              </span>
+            </div>
+
+            {/* Heading */}
+            <h1 className="mt-8 text-6xl md:text-8xl font-serif font-bold leading-[0.9]">
+              Welcome to
+              <br />
+              <span className="text-orange-400">RestroX</span>
+            </h1>
+
+            {/* Tagline */}
+            <p className="mt-6 text-2xl md:text-3xl text-gray-100">
+              Every flavor tells a story.
+            </p>
+
+            {/* Description */}
+            <p className="mt-6 text-lg md:text-xl text-gray-300 leading-8 max-w-xl">
+              Freshly handcrafted comfort food made for unforgettable moments.
+            </p>
+
+            {/* Buttons */}
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <button
+                className="px-10 py-4 rounded-full bg-orange-500 hover:bg-orange-600
+                transition-all duration-300 hover:scale-105 active:scale-95
+                font-semibold shadow-xl"
+              >
+                Explore Menu
+              </button>
+
+              <button
+                onClick={() => {
+                  document.getElementById("booking").scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                }}
+                className="px-10 py-4 rounded-full border border-white
+                hover:bg-white hover:text-black transition-all duration-300
+                hover:scale-105 active:scale-95 font-semibold"
+              >
+                Reserve Table
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center">
+          <span className="text-white text-xs uppercase tracking-[0.3em]">
+            Scroll
+          </span>
+
+          <div className="mt-3 w-0.5 h-14 bg-white/30 overflow-hidden rounded-full">
+            <div className="w-full h-6 bg-orange-400 animate-bounce" />
           </div>
         </div>
       </section>
 
-      {/* Sections */}
-      <div ref={storyRef}>
-        <OurStories />
+      <OurStories />
+      <Special />
+      <Signature />
+
+      <div id="booking">
+        <Reserve />
       </div>
 
-      <div
-      // ref={specialRef}
-      >
-        <Special />
-      </div>
-      <div>
-        <Reserve />
-        <Glimpse />
-        <Stories />
-        <Reviews />
-      </div>
+      <Glimpse />
+      <Stories />
+      <Reviews />
     </main>
   );
 };
