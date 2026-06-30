@@ -9,6 +9,7 @@ import Glimpse from "./Glimpse";
 import Stories from "./Stories";
 import Reviews from "./Reviews";
 import Signature from "./Signature";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,10 +17,11 @@ const Homepage = () => {
   const heroSectionRef = useRef(null);
   const heroContentRef = useRef(null);
   const heroImageRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Hero text animation
+      // Text animation of the top
       gsap.from(heroContentRef.current.children, {
         opacity: 0,
         y: 50,
@@ -34,7 +36,7 @@ const Homepage = () => {
         },
       });
 
-      // Hero image zoom animation
+      // Image Zoom Animation fix
       gsap.fromTo(
         heroImageRef.current,
         {
@@ -53,7 +55,7 @@ const Homepage = () => {
         },
       );
 
-      // Hero image parallax
+      // Image parallax
       gsap.to(heroImageRef.current, {
         yPercent: 15,
         ease: "none",
@@ -120,6 +122,7 @@ const Homepage = () => {
             {/* Buttons */}
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <button
+                onClick={() => navigate("/menu")}
                 className="px-10 py-4 rounded-full bg-orange-500 hover:bg-orange-600
                 transition-all duration-300 hover:scale-105 active:scale-95
                 font-semibold shadow-xl"
