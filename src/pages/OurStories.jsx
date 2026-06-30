@@ -21,69 +21,42 @@ const OurStories = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 75%",
+          start: "top 95%",
+          toggleActions: "play none none reverse",
         },
       });
 
-      tl.from(labelRef.current, {
-        opacity: 0,
-        y: 20,
-        duration: 0.8,
-        ease: "power3.out",
-      })
-        .from(
+      tl.from(
+        [
+          labelRef.current,
           headingRef.current,
-          { opacity: 0, y: 70, scale: 0.96, duration: 1.1, ease: "expo.out" },
-          "-=0.5",
-        )
-        .from(
           lineRef.current,
-          { scaleX: 0, duration: 0.9, ease: "power3.out" },
-          "-=0.7",
-        )
-        .from(
           subRef.current,
-          { opacity: 0, y: 40, duration: 0.9, ease: "power3.out" },
-          "-=0.6",
-        )
-        .from(
           paraRef.current.children,
-          {
-            opacity: 0,
-            y: 30,
-            stagger: 0.15,
-            duration: 0.8,
-            ease: "power3.out",
-          },
-          "-=0.5",
-        )
-        .from(
           quoteRef.current,
-          { opacity: 0, y: 30, scale: 0.98, duration: 0.9, ease: "power3.out" },
-          "-=0.4",
-        )
-        .from(
           btnRef.current,
-          { opacity: 0, y: 20, duration: 0.7, ease: "power3.out" },
-          "-=0.5",
-        );
-
-      // Cinematic parallax + slow zoom on the background while scrolling
-      gsap.fromTo(
-        bgRef.current,
-        { scale: 1.15, yPercent: -6 },
+        ],
         {
-          scale: 1,
-          yPercent: 6,
-          ease: "none",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1,
-          },
+          opacity: 0,
+          y: 30,
+          duration: 0.45,
+          stagger: 0.08,
+          ease: "power3.out",
         },
       );
+
+      // Background parallax
+      gsap.to(bgRef.current, {
+        scale: 1,
+        yPercent: 8,
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.7,
+        },
+      });
     }, sectionRef);
 
     return () => ctx.revert();

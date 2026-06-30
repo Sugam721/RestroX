@@ -215,100 +215,47 @@ const About = () => {
   return (
     <section
       ref={sectionRef}
-      className="
-relative
-min-h-screen
-bg-black
-overflow-hidden
-py-24
-"
+      className=" relative min-h-screen bg-black overflow-hidden py-24 "
     >
       <img
         ref={bgRef}
         src="https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782721755/Stories_ry7zvv.jpg"
         alt="RestroX"
-        className="
-absolute
-inset-0
-w-full
-h-full
-object-cover
-opacity-40
-"
+        className=" absolute inset-0 w-full h-full object-cover opacity-40 "
       />
 
       <div className="absolute inset-0 bg-black/70" />
 
-      <div
-        className="
-relative
-z-10
-px-8
-md:px-20
-lg:px-32
-"
-      >
+      <div className=" relative z-10 px-8 md:px-20 lg:px-32 ">
         <p
           ref={labelRef}
-          className="
-uppercase
-tracking-[0.4em]
-text-orange-300
-text-sm
-mb-6
-"
+          className=" uppercase tracking-[0.4em] text-orange-300 text-sm mb-6 "
         >
           About RestroX
         </p>
 
         <h1
           ref={headingRef}
-          className="
-text-white
-text-6xl
-md:text-8xl
-font-serif
-font-bold
-leading-none
-"
+          className=" text-white text-6xl md:text-8xl font-serif font-bold leading-none "
         >
           Beyond Food
         </h1>
 
         <div
           ref={lineRef}
-          className="
-origin-left
-h-px
-w-28
-bg-orange-400
-my-8
-"
+          className=" origin-left h-px w-28 bg-orange-400 my-8 "
         />
 
         <h2
           ref={subRef}
-          className="
-text-orange-200
-text-3xl
-md:text-5xl
-font-serif
-"
+          className=" text-orange-200 text-3xl md:text-5xl font-serif "
         >
           The Heart Behind RestroX
         </h2>
 
         <div
           ref={paraRef}
-          className="
-mt-8
-max-w-4xl
-space-y-5
-text-gray-200
-text-lg
-md:text-xl
-leading-relaxed
-"
+          className=" mt-8 max-w-4xl space-y-5 text-gray-200 text-lg md:text-xl leading-relaxed "
         >
           <p>
             RestroX started with one simple vision — creating a place where
@@ -328,44 +275,19 @@ leading-relaxed
 
         <div
           ref={cardsRef}
-          className="
-mt-16
-grid
-sm:grid-cols-2
-lg:grid-cols-5
-gap-6
-"
+          className=" mt-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-6 "
         >
           {highlights.map((item) => (
             <div
               key={item.title}
-              className="
-bg-black/60
-border
-border-gray-800
-rounded-2xl
-p-6
-text-center
-hover:-translate-y-2
-transition
-duration-300
-"
+              className=" bg-black/60 border border-gray-800 rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300 "
             >
               <img
                 src={item.image}
                 alt={item.title}
                 loading="eager"
                 onLoad={() => console.log(item.title, "loaded")}
-                className="
-w-20
-h-20
-rounded-full
-object-cover
-mx-auto
-mb-5
-border
-border-orange-400/40
-"
+                className=" w-20 h-20 rounded-full object-cover mx-auto mb-5 border border-orange-400/40 "
               />
 
               <h3 className="text-white font-bold mb-2">{item.title}</h3>
@@ -377,15 +299,7 @@ border-orange-400/40
 
         <div
           ref={quoteRef}
-          className="
-mt-20
-text-center
-text-3xl
-md:text-5xl
-font-serif
-italic
-text-white
-"
+          className="mt-20 text-center text-3xl md:text-5xl font-serif italic text-white"
         >
           "Good food. Good people. Great memories."
         </div>

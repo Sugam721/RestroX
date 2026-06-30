@@ -1,6 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-10">
@@ -19,10 +27,21 @@ const Footer = () => {
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
 
           <ul className="space-y-3 text-gray-400">
-            <li>Home</li>
-            <li>Menu</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+
+            <li>
+              <Link to="/menu">Menu</Link>
+            </li>
+
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
           </ul>
         </div>
 
@@ -56,8 +75,35 @@ const Footer = () => {
       </div>
 
       {/* Bottom */}
-      <div className="border-t border-gray-800 text-center py-5 text-gray-500">
-        © 2026 RestroX. All Rights Reserved.
+      <div className="border-t border-gray-800 py-5 text-gray-500 relative">
+        {/* Go To Top Arrow */}
+        <button
+          onClick={scrollToTop}
+          className="
+            absolute
+            right-8
+            top-1/2
+            -translate-y-1/2
+            w-11
+            h-11
+            rounded-full
+            border
+            border-gray-700
+            text-white
+            text-xl
+            flex
+            items-center
+            justify-center
+            hover:bg-red-500
+            hover:border-red-500
+            transition-all
+            duration-300
+          "
+        >
+          ↑
+        </button>
+
+        <p className="text-center">© 2026 RestroX. All Rights Reserved.</p>
       </div>
     </footer>
   );

@@ -515,7 +515,7 @@ const Special = () => {
 
                 {/* CTA row */}
                 <div className="mt-6 flex items-center justify-between">
-                  <button
+                  {/* <button
                     className="text-sm text-orange-400 font-semibold
                       flex items-center gap-1.5
                       hover:text-orange-300 hover:gap-3
@@ -525,17 +525,17 @@ const Special = () => {
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
                       →
                     </span>
-                  </button>
+                  </button> */}
 
                   {/* Add button */}
-                  <button
+                  {/* <button
                     className="w-9 h-9 rounded-full border border-orange-500/50 flex items-center justify-center text-orange-400 text-lg
                     font-light hover:bg-orange-500 hover:text-white hover:border-orange-500
                     hover:scale-110 hover:rotate-90 active:scale-95 transition-all duration-300"
                     aria-label="Add to order"
                   >
                     +
-                  </button>
+                  </button> */}
                 </div>
               </div>
 

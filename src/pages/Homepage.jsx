@@ -148,14 +148,14 @@ const Homepage = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center">
-          <span className="text-white text-xs uppercase tracking-[0.3em]">
+        {/* <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center"> */}
+        {/* <span className="text-white text-xs uppercase tracking-[0.3em]">
             Scroll
-          </span>
+          </span> */}
 
-          <div className="mt-3 w-0.5 h-14 bg-white/30 overflow-hidden rounded-full">
-            <div className="w-full h-6 bg-orange-400 animate-bounce" />
-          </div>
+        <div className="mt-3 w-0.5 h-14 bg-white/30 overflow-hidden rounded-full">
+          {/* <div className="w-full h-6 bg-orange-400 animate-bounce" /> */}
+          {/* </div> */}
         </div>
       </section>
 
