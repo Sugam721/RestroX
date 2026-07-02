@@ -9,7 +9,7 @@ const Stories = () => {
       <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
         {/* Image Side */}
         <div className="relative">
-          <div className="  rounded-[40px]  overflow-hidden  shadow-2xl  group">
+          <div className="rounded-[40px] overflow-hidden shadow-2xl  group">
             <img
               src="https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782905663/Final_momo_byutbw.jpg"
               alt="RestroX Story"
@@ -18,12 +18,10 @@ const Stories = () => {
           </div>
 
           {/* Floating Card */}
-          <div className="absolute-bottom-8-right-5  md:right-10 bg-white rounded-3xl shadow-xl p-6 max-w-xs">
-            {" "}
-            <h3 className="text-sm font-bold text-gray-900">More Than Food</h3>
-            <p className="text-gray-600 mt-2 text-xs">
-              Moments and memories served together.
-            </p>
+
+          {/* <h3 className="text-sm font-bold text-white">More Than Food</h3> */}
+          <div className="text-red-500 font-heading text-5xl mt-7 ">
+            Moments and memories served together.
           </div>
         </div>
 
@@ -42,7 +40,7 @@ const Stories = () => {
             </span>
           </h1>
 
-          <div className="  mt-8  space-y-5  text-white  text-lg  leading-relaxed font-body">
+          <div className="mt-8  space-y-5  text-white  text-lg  leading-relaxed font-body">
             <p>At RestroX, every dish has a story.</p>
 
             <p>
