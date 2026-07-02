@@ -115,7 +115,7 @@ const About = () => {
         scrollTrigger: {
           trigger: cardsRef.current,
 
-          start: "top 85%",
+          start: "top 95%",
 
           toggleActions: "play none none reverse",
         },
@@ -382,12 +382,12 @@ const About = () => {
             ref={ctaRef}
             className="mt-14 flex flex-wrap items-center justify-center gap-6"
           >
-            <Button
+            {/* <Button
               href="/special"
               className="px-8 py-3 rounded-full border border-[#E8873A]/50 text-[#E8873A] font-body text-sm tracking-wide hover:bg-[#E8873A]/10 transition"
             >
               Exclusive Specials
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

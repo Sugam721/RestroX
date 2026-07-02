@@ -64,12 +64,21 @@ const Footer = () => {
 
           <p className="mt-2 text-red-500 font-body">10:00 AM - 10:00 PM</p>
 
-          <div className="flex gap-4 mt-6">
-            <span className="hover:text-red-500 cursor-pointer">Instagram</span>
+          <div className="flex gap-6 mt-6">
+            <span className="flex items-center gap-2 hover:text-red-500 cursor-pointer transition-colors">
+              <Instagram size={18} />
+              Instagram
+            </span>
 
-            <span className="hover:text-red-500 cursor-pointer">Facebook</span>
+            <span className="flex items-center gap-2 hover:text-red-500 cursor-pointer transition-colors">
+              <Facebook size={18} />
+              Facebook
+            </span>
 
-            <span className="hover:text-red-500 cursor-pointer">TikTok</span>
+            <span className="flex items-center gap-2 hover:text-red-500 cursor-pointer transition-colors">
+              <Music2 size={18} />
+              TikTok
+            </span>
           </div>
         </div>
       </div>
