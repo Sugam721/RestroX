@@ -62,7 +62,7 @@ const Footer = () => {
 
           <p className="text-gray-400 ">Monday - Sunday</p>
 
-          <p className="mt-2 text-red-400 font-body">10:00 AM - 10:00 PM</p>
+          <p className="mt-2 text-red-500 font-body">10:00 AM - 10:00 PM</p>
 
           <div className="flex gap-4 mt-6">
             <span className="hover:text-red-500 cursor-pointer">Instagram</span>
