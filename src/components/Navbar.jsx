@@ -9,9 +9,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-37 px-8 py-5">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-3xl font-bold text-red-500">
+          <div className="text-4xl font-bold font-body text-red-500">
             Restro<span className="text-white">X</span>
           </div>
+
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8 text-white font-medium">
             <NavLink
