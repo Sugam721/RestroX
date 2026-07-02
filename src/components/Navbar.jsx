@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <nav className="absolute top-0 left-0 w-full z-20">
-      <div className="max-w-7xl mx-auto px-8 py-5">
+      <div className="max-w-7xl mx-37 px-8 py-5">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-3xl font-bold text-red-500">

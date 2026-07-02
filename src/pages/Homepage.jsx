@@ -11,6 +11,7 @@ import Glimpse from "./Glimpse";
 import Stories from "./Stories";
 import Reviews from "./Reviews";
 import Signature from "./Signature";
+import Ambience from "./Ambience";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -134,6 +135,7 @@ const Homepage = () => {
 
       <OurStories />
       <Special />
+      <Ambience />
       <Signature />
 
       <div id="booking">
