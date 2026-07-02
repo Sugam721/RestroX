@@ -1,194 +1,59 @@
 @import "tailwindcss";
 
-
 /* ───────────────── FONTS ───────────────── */
 
-
+/* Body Font */
 @font-face {
-  font-family: "WithHearty";
-  src: url("/WithHearty.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-.font-hearty {
-  font-family: "WithHearty", sans-serif;
-  font-weight: 700;
-}
-
-
-
-/* STK Bureau Sans */
-
-@font-face {
-  font-family: "STKBureauSans";
-  src: url("/Bureausans Regular.woff2") format("woff2");
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-
-
-
-
+/* Heading Font */
 @font-face {
-  font-family: "STKBureauSans";
-  src: url("/Max-SemiBold.woff2") format("woff2");
-  
-  font-weight: 600;
+  font-family: "WithHearty";
+  src: url("/fonts/WithHearty.otf") format("opentype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-
+/* Special Accent Font */
+@font-face {
+  font-family: "Sheepman";
+  src: url("/fonts/Sheepman.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ───────────────── GLOBAL STYLE ───────────────── */
 
-
 html,
 body {
-
-  font-family: "STKBureauSans", sans-serif;
-
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
-
   -moz-osx-font-smoothing: grayscale;
-
   text-rendering: optimizeLegibility;
-
   overflow-x: hidden;
-
 }
 
-
-
-/* ───────────────── TESTIMONIAL ANIMATION ───────────────── */
-
-
-@keyframes scrollLeft {
-
-  0% {
-    transform: translateX(0);
-  }
-
-
-  100% {
-    transform: translateX(-50%);
-  }
-
+* {
+  box-sizing: border-box;
 }
 
+/* ───────────────── FONT UTILITIES ───────────────── */
 
-
-@keyframes scrollRight {
-
-  0% {
-    transform: translateX(-50%);
-  }
-
-
-  100% {
-    transform: translateX(0);
-  }
-
+.font-body {
+  font-family: "Poppins", sans-serif;
 }
 
-
-
-.animate-scroll-left {
-
-  animation: scrollLeft 35s linear infinite;
-
+.font-heading {
+  font-family: "WithHearty", sans-serif;
 }
 
-
-
-.animate-scroll-right {
-
-  animation: scrollRight 35s linear infinite;
-
-}
-
-
-
-/* Pause animation when user hovers */
-
-
-.animate-scroll-left:hover,
-.animate-scroll-right:hover {
-
-  animation-play-state: paused;
-
-}
-
-
-
-/* ───────────────── DETAILS SECTION ANIMATION ───────────────── */
-
-
-/* Image fade + slight zoom */
-
-
-@keyframes imageFade {
-
-  from {
-
-    opacity: 0;
-
-    transform: scale(0.97);
-
-  }
-
-
-  to {
-
-    opacity: 1;
-
-    transform: scale(1);
-
-  }
-
-}
-
-
-
-.animate-fade {
-
-  animation: imageFade 0.6s ease forwards;
-
-}
-
-
-
-/* ───────────────── PROGRESS BAR ───────────────── */
-
-
-@keyframes progressFill {
-
-  from {
-
-    width: 0%;
-
-  }
-
-
-  to {
-
-    width: 100%;
-
-  }
-
-}
-
-
-
-.animate-progress {
-
-  width: 100%;
-
-  animation: progressFill 6s linear forwards;
-
+.font-special {
+  font-family: "Sheepman", sans-serif;
 }

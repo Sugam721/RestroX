@@ -62,37 +62,42 @@ const menuPages = [
         price: 350,
         desc: "Steamed rice, lentil soup, seasonal vegetables, and pickle.",
         image:
-          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782728598/images_wnvmo1.jpg",
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782897333/Thali_Set-removebg-preview_awu35i.png",
       },
       {
         name: "Chicken Curry",
         price: 420,
         desc: "Slow-cooked chicken in traditional spiced gravy.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901754/Chicken_Curry_iz9wh4.png",
       },
       {
         name: "Mutton Curry",
         price: 520,
         desc: "Tender mutton simmered in rich aromatic spices.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901755/Mutton_Curry_xo3zff.jpg",
       },
       {
         name: "Paneer Butter Masala",
         price: 380,
         desc: "Cottage cheese cubes in creamy tomato butter sauce.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901756/Paneer_Butter_Masala_exma3x.png",
       },
       {
         name: "Butter Chicken",
         price: 450,
         desc: "Tandoor chicken in a velvety tomato cream sauce.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901753/Butter_Chicken_s6w666.avif",
       },
       {
         name: "Dal Makhani",
         price: 320,
         desc: "Slow simmered black lentils finished with cream.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901755/Dal_Makhani_nd7rv6.png",
       },
     ],
   },
@@ -112,19 +117,22 @@ const menuPages = [
         name: "Veg Fried Rice",
         price: 260,
         desc: "Wok tossed rice with seasonal vegetables.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901754/Veg_Fried_Rice_jmttmk.png",
       },
       {
         name: "Chicken Fried Rice",
         price: 300,
         desc: "Classic fried rice loaded with diced chicken.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901754/Chicken_Fried_Rice_x4ew5h.avif",
       },
       {
         name: "Chilli Chicken",
         price: 380,
         desc: "Crispy chicken tossed in spicy soy chilli glaze.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901754/Chilli_Chicken_ed77rl.avif",
       },
       {
         name: "Schezwan Noodles",
@@ -137,7 +145,8 @@ const menuPages = [
         name: "Thukpa",
         price: 280,
         desc: "Himalayan noodle soup with vegetables and herbs.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901753/Thukpa_qx4pvn.avif",
       },
     ],
   },
@@ -150,19 +159,22 @@ const menuPages = [
         name: "Margherita Pizza",
         price: 550,
         desc: "Classic pizza with tomato mozzarella and basil.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901755/Margherita_Pizza_wvvuee.png",
       },
       {
         name: "Chicken BBQ Pizza",
         price: 750,
         desc: "Smoky barbecue chicken with mozzarella.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901753/Chicken_BBQ_Pizza_vlq4pr.jpg",
       },
       {
         name: "Spaghetti Aglio e Olio",
         price: 490,
         desc: "Garlic infused olive oil pasta.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901756/pngtree-pasta-spaghetti-aglio-olio-e-peperoncino-png-image_15320368_gq5bgw.png",
       },
       {
         name: "Grilled Chicken Steak",
@@ -175,13 +187,15 @@ const menuPages = [
         name: "Club Sandwich",
         price: 320,
         desc: "Triple layered sandwich with chicken and egg.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901764/Club_Sandwich_vbeykl.png",
       },
       {
         name: "Mushroom Soup",
         price: 220,
         desc: "Creamy roasted mushroom soup.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901753/Mushroom_Soup_walac3.webp",
       },
     ],
   },
@@ -194,37 +208,43 @@ const menuPages = [
         name: "Classic French Fries",
         price: 180,
         desc: "Crispy golden fries with house dip.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901754/Classic_French_Fries_khyhr6.jpg",
       },
       {
         name: "Peri Peri Fries",
         price: 210,
         desc: "Fries tossed in peri peri seasoning.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901757/Peri-Peri-Fries_pyuwi5.png",
       },
       {
         name: "Chicken Lollipop",
         price: 350,
         desc: "Fried chicken wings with glaze.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901754/Chicken_Lollipop_j98spp.avif",
       },
       {
         name: "Paneer Pakora",
         price: 260,
         desc: "Crispy cottage cheese fritters.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901756/Paneer_Pakora_fgvflf.avif",
       },
       {
         name: "Spring Rolls",
         price: 240,
         desc: "Crisp vegetable rolls.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901756/Spring_Rolls_agemzg.png",
       },
       {
         name: "Onion Rings",
         price: 190,
         desc: "Golden fried onion rings.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901755/Onion_Rings_ukubv1.avif",
       },
     ],
   },
@@ -237,13 +257,15 @@ const menuPages = [
         name: "Masala Tea",
         price: 80,
         desc: "Traditional spiced milk tea.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901755/Masala_tea_dy6rup.avif",
       },
       {
         name: "Cold Coffee",
         price: 180,
         desc: "Chilled coffee blended with milk.",
-        image: "",
+        image:
+          "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782901755/Cold_coffee_heuhfy.avif",
       },
       {
         name: "Fresh Lime Soda",
@@ -279,14 +301,17 @@ const menuPages = [
 
 export default function Menu() {
   const [page, setPage] = useState(0);
+
   const [direction, setDirection] = useState("next");
 
   const total = menuPages.length;
+
   const current = menuPages[page];
 
   const goNext = () => {
     if (page < total - 1) {
       setDirection("next");
+
       setPage((p) => p + 1);
     }
   };
@@ -294,6 +319,7 @@ export default function Menu() {
   const goPrev = () => {
     if (page > 0) {
       setDirection("prev");
+
       setPage((p) => p - 1);
     }
   };
@@ -322,17 +348,27 @@ export default function Menu() {
 
           <div
             className="
+
   w-full 
+
   overflow-hidden 
+
   rounded-2xl 
+
   shadow-2xl
+
   border
+
   border-gray-300
+
   "
             style={{
               perspective: "1800px",
+
               backgroundImage: `url(${menuBackground})`,
+
               backgroundSize: "cover",
+
               backgroundPosition: "center",
             }}
           >
@@ -417,6 +453,7 @@ export default function Menu() {
               key={i}
               onClick={() => {
                 setDirection(i > page ? "next" : "prev");
+
                 setPage(i);
               }}
               className={`h-2 rounded-full transition-all ${
@@ -428,32 +465,60 @@ export default function Menu() {
       </div>
 
       <style>{`@keyframes pageFlipNext{
+
 0%{
+
 transform:rotateY(-90deg);
+
 opacity:0;
+
 }
+
+
 
 100%{
+
 transform:rotateY(0);
+
 opacity:1;
-}
 
 }
+
+
+
+}
+
+
+
 
 
 @keyframes pageFlipPrev{
 
+
+
 0%{
+
 transform:rotateY(90deg);
+
 opacity:0;
+
 }
+
+
 
 100%{
+
 transform:rotateY(0);
+
 opacity:1;
-}
 
 }
+
+
+
+}
+
+
 
 `}</style>
     </section>

@@ -4,21 +4,16 @@ const images = [
   {
     title: "Restaurant Interior",
     image:
-      "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782721767/outlet_ogz92l.webp",
+      "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782978389/dine_dsbh4b.webp",
     size: "normal",
   },
   {
     title: "Food Presentation",
     image:
-      "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782721739/Dish5_ymue6v.webp",
+      "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782894555/Chef1_xq6ixz.jpg",
     size: "normal",
   },
-  {
-    title: "Happy Guests",
-    image:
-      "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782722923/images_1_cqtpnx.jpg",
-    size: "normal",
-  },
+
   {
     title: "Chef Preparing Dishes",
     image:
@@ -29,15 +24,10 @@ const images = [
     title: "Signature Momo",
     image:
       "https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782723335/momo_grizlf.jpg",
-    size: "large",
+    size: "normal",
   },
 ];
 
-/**
- * Small hook: flips `visible` to true the first time the section
- * scrolls into view, so the entrance animation only plays once,
- * triggered at the right moment instead of on mount.
- */
 const useInView = (options = { threshold: 0.15 }) => {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -55,7 +45,6 @@ const useInView = (options = { threshold: 0.15 }) => {
 
     observer.observe(node);
     return () => observer.disconnect();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return [ref, inView];
@@ -67,7 +56,7 @@ const Glimpse = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#faf7f2] py-24 px-6 md:px-12 overflow-hidden"
+      className="bg-[#000000] py-24 px-6 md:px-12 overflow-hidden"
     >
       {/* Heading */}
       <div
@@ -77,15 +66,15 @@ const Glimpse = () => {
             : "opacity-0 translate-y-6"
         }`}
       >
-        <p className="uppercase tracking-[4px] text-sm text-orange-600 font-semibold">
+        <p className="uppercase tracking-[4px] text-2xl text-red-600 font-special">
           Inside RestroX
         </p>
 
-        <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mt-4">
-          A Glimpse of <span className="text-orange-600">RestroX</span>
+        <h2 className="text-4xl md:text-6xl font-special text-gray-300 mt-4">
+          A Glimpse of <span className="text-red-600">RestroX</span>
         </h2>
 
-        <p className="mt-6 text-gray-600 text-lg leading-relaxed">
+        <p className="mt-6 text-gray-400 text-lg leading-relaxed font-body">
           A place designed for food, conversations, and memories.
           <br />
           From the first bite to the final smile, every corner of RestroX
@@ -103,7 +92,7 @@ const Glimpse = () => {
             }}
             className={`relative overflow-hidden rounded-3xl group shadow-lg
               transition-all duration-700 ease-out
-              hover:shadow-2xl hover:shadow-orange-900/20
+              hover:shadow-2xl hover:shadow-Red-900/20
               ${sectionInView ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-[0.97]"}
               ${item.size === "large" ? "md:col-span-2 md:row-span-2" : "md:col-span-1"}`}
           >
@@ -114,21 +103,19 @@ const Glimpse = () => {
               className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
             />
 
-            {/* Overlay */}
             <div
-              className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent
+              className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent
                 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out
                 flex items-end p-6"
             >
               <h3
-                className="text-white text-xl font-semibold translate-y-3 group-hover:translate-y-0
+                className="text-white text-xl font-special translate-y-3 group-hover:translate-y-0
                   opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out delay-75"
               >
                 {item.title}
               </h3>
             </div>
 
-            {/* Subtle ring on hover for a bit of polish */}
             <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/0 group-hover:ring-white/20 transition-all duration-500 pointer-events-none" />
           </div>
         ))}
@@ -142,7 +129,7 @@ const Glimpse = () => {
             : "opacity-0 translate-y-6"
         }`}
       >
-        <p className="text-gray-700 italic text-lg">
+        <p className="text-red-500 translate-x-[0.25em] text-5xl font-heading">
           "Every dish has a story, every table has a memory."
         </p>
       </div>

@@ -67,88 +67,75 @@ const OurStories = () => {
       ref={sectionRef}
       className="relative min-h-screen w-full flex items-center overflow-hidden bg-black"
     >
-      {/* Background Image */}
+      {/* Background Image for The page*/}
       <img
         ref={bgRef}
-        className="absolute inset-0 w-full h-full object-cover scale-110 opacity-70 will-change-transform"
+        className="absolute inset-0 w-full h-full object-cover scale-110 opacity-70 will-change-transform brightness-75"
         src="https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782721755/Stories_ry7zvv.jpg"
         alt="RestroX Story"
       />
 
-      {/* Dark overlay + cinematic gradient */}
+      {/* Dark overlay and Gradient */}
       <div className="absolute inset-0 bg-black/45" />
       <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent" />
 
-      {/* Content */}
+      {/* Content  */}
       <div
         ref={contentRef}
-        className="relative z-10 px-8 md:px-20 lg:px-32 max-w-5xl"
+        className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-24"
       >
-        {/* Eyebrow label */}
-        <p
-          ref={labelRef}
-          className="uppercase tracking-[0.4em] text-orange-300 text-sm mb-6"
-        >
-          Our Journey
-        </p>
+        <div className="grid lg:grid-cols-2 gap-4 items-center">
+          {/* Left Image */}
+          <div className="flex justify-center">
+            <img
+              src="https://res.cloudinary.com/dgfp5n7bn/image/upload/v1782894555/Chef1_xq6ixz.jpg"
+              alt="Chef"
+              className="w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl object-cover brightness-80"
+            />
+          </div>
 
-        {/* Main heading */}
-        <h1
-          ref={headingRef}
-          className="text-white text-6xl md:text-8xl font-serif font-bold leading-none"
-        >
-          Our Story
-        </h1>
+          {/* Right Content */}
+          <div>
+            {/* Eyebrow label */}
+            <p
+              ref={labelRef}
+              className="uppercase tracking-wide text-red-500 text-3xl font-heading font-bold"
+            >
+              Discover
+            </p>
 
-        {/* Divider line */}
-        <div
-          ref={lineRef}
-          className="origin-left h-px w-24 md:w-32 bg-linear-to-r from-orange-300 to-transparent my-7"
-        />
+            {/* Main heading */}
+            <h1
+              ref={headingRef}
+              className="text-red-500 text-5xl md:text-6xl font-special font-bold leading-none"
+            >
+              Our Story
+            </h1>
 
-        {/* Subheading */}
-        <h2
-          ref={subRef}
-          className="text-3xl md:text-5xl font-serif text-orange-200"
-        >
-          The Story Behind RestroX
-        </h2>
+            <div
+              ref={paraRef}
+              className="mt-6 space-y-5 text-gray-100 text-lg md:text-xl leading-relaxed font-body"
+            >
+              <p>
+                RestroX began with a simple idea — create a place where people
+                can enjoy amazing food and unforgettable experiences. What
+                started as a love for crafting delicious dishes grew into a
+                restaurant where every plate represents quality, creativity, and
+                care. Our famous momo became a customer favorite, but our
+                journey is about much more — bringing people together through
+                great food.
+              </p>
+            </div>
 
-        {/* Story paragraphs */}
-        <div
-          ref={paraRef}
-          className="mt-8 max-w-3xl space-y-5 text-gray-100 text-lg md:text-xl leading-relaxed"
-        >
-          <p>
-            RestroX began with a simple idea — create a place where people can
-            enjoy amazing food and unforgettable experiences.
-          </p>
-          <p>
-            What started as a love for crafting delicious dishes grew into a
-            restaurant where every plate represents quality, creativity, and
-            care.
-          </p>
-          <p>
-            Our famous momo became a customer favorite, but our journey is about
-            much more — bringing people together through great food.
-          </p>
+            {/* Quote */}
+          </div>
         </div>
-
-        {/* Quote */}
         <div
           ref={quoteRef}
-          className="mt-10 text-2xl md:text-4xl text-white font-serif italic"
+          className="mt-10 text-3xl md:text-6xl text-red-500 font-heading  item-center px-55"
         >
           "Good food. Good people. Great memories."
         </div>
-
-        {/* CTA Button */}
-        <button
-          ref={btnRef}
-          className="mt-10 px-10 py-4 rounded-full bg-orange-500 hover:bg-orange-600 transition-all duration-300 hover:scale-105 text-white font-semibold shadow-lg shadow-orange-500/30"
-        >
-          Discover Our Menu
-        </button>
       </div>
     </section>
   );

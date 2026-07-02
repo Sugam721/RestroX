@@ -27,11 +27,6 @@ const reviews = [
   },
 ];
 
-/**
- * Flips `inView` to true the first time the section scrolls into the
- * viewport, so the entrance animation triggers on scroll rather than
- * firing immediately on mount.
- */
 const useInView = (options = { threshold: 0.15 }) => {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -70,7 +65,7 @@ const Reviews = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#f8f3ec] py-28 px-6 overflow-hidden"
+      className="bg-[#000000] py-28 px-6 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
@@ -81,18 +76,18 @@ const Reviews = () => {
               : "opacity-0 translate-y-6"
           }`}
         >
-          <p className="text-orange-600 uppercase tracking-[6px] text-sm font-medium">
+          <p className="text-red-600 uppercase tracking-[5px] text-xl font-special">
             Guest Reviews
           </p>
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mt-4">
-            <h1 className="text-5xl md:text-7xl font-serif text-gray-900 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-special text-white leading-tight">
               What our guests
               <br />
-              <span className="text-orange-600">remember</span>
+              <span className="text-red-600 font-special">remember</span>
             </h1>
 
-            <p className="max-w-md text-gray-600 text-lg leading-relaxed">
+            <p className="max-w-md text-white text-lg leading-relaxed font-body">
               Every visit creates a small story — from the first bite, shared
               conversations, and moments around the table.
             </p>
@@ -116,7 +111,7 @@ const Reviews = () => {
                 ${sectionInView && index === 1 ? "md:-translate-y-8!" : ""}`}
             >
               {/* Quote mark */}
-              <div className="absolute top-5 right-7 text-7xl text-orange-100 font-serif select-none transition-colors duration-500 group-hover:text-orange-200">
+              <div className="absolute top-5 right-7 text-7xl text-orange-100 font-body select-none transition-colors duration-500 group-hover:text-orange-200">
                 ”
               </div>
 
@@ -136,36 +131,27 @@ const Reviews = () => {
                   src={item.image}
                   alt={item.name}
                   loading="lazy"
-                  className="w-14 h-14 rounded-full object-cover ring-2 ring-orange-50 transition-transform duration-500 group-hover:scale-105"
+                  className="w-14 h-14 rounded-full object-cover ring-2 ring-white-50 transition-transform duration-500 group-hover:scale-105"
                 />
 
                 <div>
-                  <h3 className="font-semibold text-gray-900">{item.name}</h3>
-                  <p className="text-sm text-gray-500">{item.role}</p>
+                  <h3 className="font-heading text-4xl text-gray-900">
+                    {item.name}
+                  </h3>
+                  <p className="font-body text-sm text-gray-500">{item.role}</p>
                 </div>
               </div>
             </article>
           ))}
         </div>
 
-        {/* Bottom CTA */}
         <div
           className={`mt-20 flex justify-center transition-all duration-700 ease-out delay-300 ${
             sectionInView
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-6"
           }`}
-        >
-          <button
-            type="button"
-            className="group flex items-center gap-3 bg-orange-600 text-white rounded-full px-8 py-4 shadow-lg shadow-orange-600/20 text-center font-medium transition-all duration-300 hover:bg-orange-700 hover:shadow-xl hover:shadow-orange-600/30 hover:-translate-y-0.5"
-          >
-            Share your experience
-            <span className="transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </button>
-        </div>
+        ></div>
       </div>
     </section>
   );
