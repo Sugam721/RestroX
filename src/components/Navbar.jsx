@@ -71,7 +71,7 @@ const Navbar = () => {
           {/* Book a Table Button */}
           <button
             onClick={() => {
-              navigate("/#booking");
+              navigate("/booking");
             }}
             className="bg-red-600 text-white px-7 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-white hover:text-black"
           >

@@ -11,6 +11,7 @@ import ScrollToTop from "./pages/ScrollToTop";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Reserve from "./pages/Reserve";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/menu" element={<Menu />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/booking" element={<Reserve />} />
         </Route>
       </Routes>
     </>

@@ -138,12 +138,12 @@ const Homepage = () => {
       <Ambience />
       <Signature />
 
-      <div id="booking">
+      {/* <div id="booking">
         <Reserve />
-      </div>
+      </div> */}
 
       <Glimpse />
-      <Stories />
+      {/* <Stories /> */}
       <Reviews />
     </main>
   );
